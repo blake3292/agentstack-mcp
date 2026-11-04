@@ -1,0 +1,88 @@
+{
+  "author": "Blake Balfour",
+  "authorUrl": "https://github.com/blake3292",
+  "category": "developer",
+  "cloudEndpoint": "https://agentstackdata.com/mcp",
+  "description": "Verified AI-agent tool catalog with pricing: search, voice, MCP, automation and data APIs.",
+  "homepage": "https://github.com/blake3292/agentstack-mcp",
+  "identifier": "blake3292-agentstack-data",
+  "name": "Agent Stack Data",
+  "tags": [
+    "ai-agents",
+    "developer-tools",
+    "api-directory",
+    "mcp",
+    "pricing"
+  ],
+  "version": "1.0.0",
+  "tools": [
+    {
+      "name": "search_tools",
+      "description": "Search the Agent Stack Data verified catalog of tools. Returns a compact ranked shortlist with prices and links.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "What the user is looking for"
+          },
+          "category": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    {
+      "name": "get_tool",
+      "description": "Get the full verified record for one tool by name.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      }
+    },
+    {
+      "name": "compare_tools",
+      "description": "Compare two or more tools side by side on key specs and price.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "names": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "names"
+        ]
+      }
+    },
+    {
+      "name": "list_categories",
+      "description": "List the catalog categories with item counts.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "catalog_info",
+      "description": "About this catalog: coverage, item count, last update, and usage terms.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ]
+}

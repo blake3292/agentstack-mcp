@@ -1,0 +1,8 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.agentstackdata/agentstack",
+  "description": "Verified AI-agent tool catalog with pricing: search, voice, MCP, automation and data APIs.",
+  "version": "1.0.0",
+  "websiteUrl": "https://agentstackdata.com",
+  "remotes": [{ "type": "streamable-http", "url": "https://agentstackdata.com/mcp" }]
+}
